@@ -1,35 +1,30 @@
-name: DeployGuard Deployment
-
+﻿name: DeployGuard Deployment
 on:
-workflow_dispatch:
-inputs:
-project_name:
-description: "Project name"
-required: true
-type: string
-environment:
-description: "Deployment environment"
-required: true
-type: choice
-options:
-- DEVELOPMENT
-- STAGING
-- PRODUCTION
-
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: "Project name"
+        required: true
+        type: string
+      environment:
+        description: "Deployment environment"
+        required: true
+        type: choice
+        options:
+          - DEVELOPMENT
+          - STAGING
+          - PRODUCTION
 jobs:
-deployment:
-name: Run Deployment Workflow
-runs-on: ubuntu-latest
-
-
-steps:
-  - name: Start deployment
-    run: |
-      echo "DeployGuard workflow started."
-      echo "Project: ${{ inputs.project_name }}"
-      echo "Environment: ${{ inputs.environment }}"
-
-  - name: Deployment placeholder
-    run: |
-      echo "Workflow executed successfully."
-      echo "Actual application deployment is not configured yet."
+  deployment:
+    name: Run Deployment Workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start deployment
+        run: |
+          echo "DeployGuard workflow started."
+          echo "Project: ${{ inputs.project_name }}"
+          echo "Environment: ${{ inputs.environment }}"
+      - name: Deployment placeholder
+        run: |
+          echo "Workflow executed successfully."
+          echo "Actual application deployment is not configured yet."
