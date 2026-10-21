@@ -21,6 +21,7 @@ deployment:
 name: Run Deployment Workflow
 runs-on: ubuntu-latest
 
+
 steps:
   - name: Start deployment
     run: |
@@ -32,4 +33,3 @@ steps:
     run: |
       echo "Workflow executed successfully."
       echo "Actual application deployment is not configured yet."
-
