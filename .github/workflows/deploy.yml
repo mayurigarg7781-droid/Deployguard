@@ -11,5 +11,7 @@ steps:
 - name: Start deployment
 run: echo "DeployGuard workflow started successfully!"
 
+
   - name: Deployment placeholder
     run: echo "Actual application deployment is not configured yet."
+
